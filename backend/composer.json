@@ -53,6 +53,10 @@
             "@php vendor/bin/pint",
             "@php vendor/bin/pint --config=pint-strict.json app routes tests"
         ],
+        "format:test": [
+            "@php vendor/bin/pint --test",
+            "@php vendor/bin/pint --test --config=pint-strict.json app routes tests"
+        ],
         "analyse": [
             "@php -d memory_limit=512M vendor/bin/phpstan analyse --no-progress"
         ],
