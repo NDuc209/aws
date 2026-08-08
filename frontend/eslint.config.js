@@ -19,4 +19,12 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // Component do shadcn/ui sinh ra — export kèm variants nên vi phạm
+    // react-refresh/only-export-components. Không sửa tay các file này.
+    files: ['src/components/ui/**/*.{ts,tsx}'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ])
